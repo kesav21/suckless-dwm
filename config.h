@@ -102,7 +102,7 @@ static Key keys[] = {
 	{ MODKEY          , XK_w     , killclient   , { 0 }           },
 	{ MODKEY          , XK_h     , setmfact     , { .f = -0.005 } },
 	{ MODKEY          , XK_l     , setmfact     , { .f = +0.005 } },
-	// { MODKEY          , XK_f     , togglefullscr, { 0 }           },
+	{ MODKEY          , XK_f     , togglefullscr, { 0 }           },
 	{ MODKEY          , XK_Return, zoom         , { 0 }           },
 	{ MODKEY          , XK_comma , focusmon     , { .i = -1 }     },
 	{ MODKEY          , XK_period, focusmon     , { .i = +1 }     },
