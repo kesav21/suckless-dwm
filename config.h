@@ -1,19 +1,5 @@
 // vim: set foldmethod=marker:
 
-// patches to consider
-// https://dwm.suckless.org/patches/activetagindicatorbar/
-// https://dwm.suckless.org/patches/bottomstack/
-// https://dwm.suckless.org/patches/center/
-// https://dwm.suckless.org/patches/deck/
-// https://dwm.suckless.org/patches/monocle_count/
-// https://dwm.suckless.org/patches/notitle/
-// https://dwm.suckless.org/patches/restartsig/
-// https://dwm.suckless.org/patches/scratchpad/
-// https://dwm.suckless.org/patches/single_tagset/
-// https://dwm.suckless.org/patches/smartborders/
-// https://dwm.suckless.org/patches/statusallmons/
-// https://dwm.suckless.org/patches/viewontag/
-
 #include <X11/XF86keysym.h>
 
 // appearance {{{
@@ -76,7 +62,9 @@ static const char *colors[][3] = {
 static const Rule rules[] = {
 
 	// { class              , instance              , title                 , tags mask, isfloating, monitor }
-	{ "st-256color"         , "fzfmenu"             , "sh"                  , 0        , 1         , -1      },
+	{ "st-256color"         , "fzfmenu"             , NULL                  , 0        , 1         , -1      },
+	{ "st-256color"         , "scratchpad"          , NULL                  , 0        , 1         , -1      },
+	{ "st-256color"         , "calculator"          , NULL                  , 0        , 1         , -1      },
 	{ "Pavucontrol"         , "pavucontrol"         , "Volume Control"      , 0        , 1         , -1      },
 	{ "SimpleScreenRecorder", "SimpleScreenRecorder", "simplescreenrecorder", 0        , 1         , -1      },
 	{ "Wicd-client.py"      , "wicd-client.py"      , "Wicd Network Manager", 0        , 1         , -1      },
