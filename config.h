@@ -19,9 +19,10 @@ static const int resizehints = 0;    // 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	// symbol, arrange function
-	{ "[]="  , tile    }, // first entry is default
-	{ "[M]"  , monocle },
-	{ "><>"  , NULL    }, // no layout function means floating behavior
+	{ "[]=", tile    },
+	{ "[M]", monocle },
+	{ "[D]", deck    },
+	{ "><>", NULL    }, // no layout function means floating behavior
 };
 
 // }}}
@@ -108,11 +109,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_comma , tagmon       , { .i = -1 }     },
 	{ MODKEY|ShiftMask, XK_period, tagmon       , { .i = +1 }     },
 
-	// { MODKEY, XK_minus, setgaps, { .i = +5 } },
-	// { MODKEY, XK_equal, setgaps, { .i = -5 } },
-
 	{ MODKEY, XK_t, setlayout, {.v = &layouts[0]} },  /* tile */
 	{ MODKEY, XK_m, setlayout, {.v = &layouts[1]} },  /* monocle */
+	{ MODKEY, XK_d, setlayout, {.v = &layouts[2]} },  /* deck */
 };
 
 static Button buttons[] = {
