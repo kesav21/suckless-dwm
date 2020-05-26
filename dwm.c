@@ -718,6 +718,17 @@ drawbar(Monitor *m)
 					urg & 1 << i);
 		x += w;
 	}
+
+	/* in monocle layout, display number of selected client and number of clients */
+	unsigned int s = 0, a = 0;
+	if(m->lt[m->sellt]->arrange == monocle) {
+		for(c= nexttiled(m->clients); c; c= nexttiled(c->next), a++)
+			if(c == m->stack)
+				s = a;
+		s++;
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d/%d]", s, a);
+	}
+
 	w = blw = TEXTW(m->ltsymbol);
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
@@ -1090,14 +1101,7 @@ maprequest(XEvent *e)
 void
 monocle(Monitor *m)
 {
-	unsigned int n = 0;
 	Client *c;
-
-	for (c = m->clients; c; c = c->next)
-		if (ISVISIBLE(c))
-			n++;
-	if (n > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
 }
