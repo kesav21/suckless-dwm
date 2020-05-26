@@ -18,11 +18,13 @@ static const int nmaster     = 1;    // number of clients in master area
 static const int resizehints = 0;    // 1 means respect size hints in tiled resizals
 
 static const Layout layouts[] = {
-	// symbol, arrange function
-	{ "[]=", tile    },
-	{ "[M]", monocle },
-	{ "[D]", deck    },
-	{ "><>", NULL    }, // no layout function means floating behavior
+
+	{ "[]=", tile        },
+	{ "[M]", monocle     },
+	{ "[D]", deck        },
+	{ "TTT", bstack      },
+	{ "><>", NULL        }, // floating
+
 };
 
 // }}}
@@ -112,6 +114,7 @@ static Key keys[] = {
 	{ MODKEY, XK_t, setlayout, {.v = &layouts[0]} },  /* tile */
 	{ MODKEY, XK_m, setlayout, {.v = &layouts[1]} },  /* monocle */
 	{ MODKEY, XK_d, setlayout, {.v = &layouts[2]} },  /* deck */
+	{ MODKEY, XK_b, setlayout, {.v = &layouts[3]} },  /* bstack */
 };
 
 static Button buttons[] = {
