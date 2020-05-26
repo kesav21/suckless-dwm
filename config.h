@@ -18,7 +18,6 @@
 
 // appearance {{{
 
-static const unsigned int gappx     = 0;  // gaps between windows
 static const unsigned int borderpx  = 1;  // border pixel of windows
 static const unsigned int snap      = 32; // snap pixel
 static const int showbar            = 1;  // 0 means no bar
@@ -46,23 +45,23 @@ static const Layout layouts[] = {
 static const char col_foreground[]   = "#ebdbb2";
 static const char col_background[]   = "#1d2021";
 static const char col_background2[]  = "#504945";
-// static const char col_cursorColor[]  = "#ebdbb2";
-// static const char col_color0[]       = "#282828";
-// static const char col_color8[]       = "#928374";
-// static const char col_color1[]       = "#cc241d";
-// static const char col_color9[]       = "#fb4934";
-// static const char col_color2[]       = "#98971a";
-// static const char col_color10[]      = "#b8bb26";
-// static const char col_color3[]       = "#d79921";
-// static const char col_color11[]      = "#fabd2f";
-// static const char col_color4[]       = "#458588";
-// static const char col_color12[]      = "#83a598";
-// static const char col_color5[]       = "#b16286";
-// static const char col_color13[]      = "#d3869b";
-// static const char col_color6[]       = "#689d6a";
-// static const char col_color14[]      = "#8ec07c";
+static const char col_cursorColor[]  = "#ebdbb2";
+static const char col_color0[]       = "#282828";
+static const char col_color8[]       = "#928374";
+static const char col_color1[]       = "#cc241d";
+static const char col_color9[]       = "#fb4934";
+static const char col_color2[]       = "#98971a";
+static const char col_color10[]      = "#b8bb26";
+static const char col_color3[]       = "#d79921";
+static const char col_color11[]      = "#fabd2f";
+static const char col_color4[]       = "#458588";
+static const char col_color12[]      = "#83a598";
+static const char col_color5[]       = "#b16286";
+static const char col_color13[]      = "#d3869b";
+static const char col_color6[]       = "#689d6a";
+static const char col_color14[]      = "#8ec07c";
 static const char col_color7[]       = "#a89984";
-// static const char col_color15[]      = "#ebdbb2";
+static const char col_color15[]      = "#ebdbb2";
 
 static const char *colors[][3] = {
 	// [name]    = { fg            , bg            , border          }
