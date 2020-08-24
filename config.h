@@ -13,7 +13,7 @@ static const char *fonts[]          = { "FiraMono Nerd Font:style=Regular:size=1
 
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-static const float mfact     = 0.5; // factor of master area size [0.05..0.95]
+static const float mfact     = 0.395; // factor of master area size [0.05..0.95]
 static const int nmaster     = 1;    // number of clients in master area
 static const int resizehints = 0;    // 1 means respect size hints in tiled resizals
 
@@ -71,6 +71,8 @@ static const Rule rules[] = {
 	{ "Pavucontrol"         , "pavucontrol"         , "Volume Control"      , 0        , 1         , 1         , -1      },
 	{ "SimpleScreenRecorder", "SimpleScreenRecorder", "simplescreenrecorder", 0        , 1         , 1         , -1      },
 	{ "Wicd-client.py"      , "wicd-client.py"      , "Wicd Network Manager", 0        , 1         , 1         , -1      },
+	{ "Thunar"              , NULL                  , NULL                  , 0        , 1         , 1         , -1      },
+	{ "firefox"             , "Toolkit"             , "Picture-in-Picture"  , 0        , 1         , 1         , -1      },
 
 };
 
@@ -98,7 +100,7 @@ static Key keys[] = {
 	TAGKEYS(XK_8, 7)
 	TAGKEYS(XK_9, 8)
 
-	// {modifier       , key      , function     , {argument}}
+	// {modifier       , key      , function     , {argument}     }
 	{ MODKEY          , XK_j     , focusstack   , { .i = +1 }     },
 	{ MODKEY          , XK_k     , focusstack   , { .i = -1 }     },
 	{ MODKEY          , XK_w     , killclient   , { 0 }           },
