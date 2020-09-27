@@ -115,7 +115,7 @@ static Key keys[] = {
 	{ MODKEY, XK_t, setlayout, { .v = &layouts[0]} },  /* tile */
 	{ MODKEY, XK_m, setlayout, { .v = &layouts[1]} },  /* monocle */
 	{ MODKEY, XK_d, setlayout, { .v = &layouts[2]} },  /* deck */
-	{ MODKEY, XK_b, setlayout, { .v = &layouts[3]} },  /* bstack */
+	// { MODKEY, XK_b, setlayout, { .v = &layouts[3]} },  /* bstack */
 };
 
 static Button buttons[] = {
