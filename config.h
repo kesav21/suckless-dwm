@@ -78,7 +78,7 @@ static const Rule rules[] = {
 
 // }}}
 
-// bindings {{{
+// keyboard bindings {{{
 
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
@@ -117,6 +117,10 @@ static Key keys[] = {
 	{ MODKEY, XK_d, setlayout, { .v = &layouts[2]} },  /* deck */
 	// { MODKEY, XK_b, setlayout, { .v = &layouts[3]} },  /* bstack */
 };
+
+// }}}
+
+// mouse bindings {{{
 
 static Button buttons[] = {
 	// { clickevent, mask  , button , function      , { argument } }
