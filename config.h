@@ -4,7 +4,7 @@
 
 // appearance {{{
 
-static const unsigned int borderpx  = 1;  // border pixel of windows
+static const unsigned int borderpx  = 3;  // border pixel of windows
 static const unsigned int snap      = 32; // snap pixel
 static const int showbar            = 1;  // 0 means no bar
 static const int topbar             = 1;  // 0 means bottom bar
@@ -13,7 +13,7 @@ static const char *fonts[]          = { "FiraCode Nerd Font:style=Regular:size=1
 
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-static const float mfact     = 0.395; // factor of master area size [0.05..0.95]
+static const float mfact     = 0.397; // factor of master area size [0.05..0.95]
 static const int nmaster     = 1;    // number of clients in master area
 static const int resizehints = 0;    // 1 means respect size hints in tiled resizals
 
@@ -55,7 +55,7 @@ static const char col_color15[]      = "#ebdbb2";
 static const char *colors[][3] = {
 	// [name]    = { fg            , bg            , border          }
 	[SchemeNorm] = { col_foreground, col_background, col_background2 },
-	[SchemeSel]  = { col_background, col_color7    , col_color7      },
+	[SchemeSel]  = { col_foreground, col_color1    , col_color1      },
 };
 
 // }}}
