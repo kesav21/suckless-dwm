@@ -82,13 +82,12 @@ static const Rule rules[] = {
 
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY, view,       {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY, tag,        {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY, toggleview, {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY, toggletag,  {.ui = 1 << TAG} },
+	{ MODKEY,                       KEY, view,       { .ui = 1 << TAG} }, \
+	{ MODKEY|ShiftMask,             KEY, tag,        { .ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask,           KEY, toggleview, { .ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask|ShiftMask, KEY, toggletag,  { .ui = 1 << TAG} },
 
 static Key keys[] = {
-
 	// alt+number goes to tag
 	TAGKEYS(XK_1, 0)
 	TAGKEYS(XK_2, 1)
@@ -100,7 +99,7 @@ static Key keys[] = {
 	TAGKEYS(XK_8, 7)
 	TAGKEYS(XK_9, 8)
 
-	// {modifier       , key      , function     , {argument}     }
+	// {modifier      , key      , function     , { argument }     }
 	{ MODKEY          , XK_j     , focusstack   , { .i = +1 }     },
 	{ MODKEY          , XK_k     , focusstack   , { .i = -1 }     },
 	{ MODKEY          , XK_w     , killclient   , { 0 }           },
@@ -113,19 +112,17 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_comma , tagmon       , { .i = -1 }     },
 	{ MODKEY|ShiftMask, XK_period, tagmon       , { .i = +1 }     },
 
-	{ MODKEY, XK_t, setlayout, {.v = &layouts[0]} },  /* tile */
-	{ MODKEY, XK_m, setlayout, {.v = &layouts[1]} },  /* monocle */
-	{ MODKEY, XK_d, setlayout, {.v = &layouts[2]} },  /* deck */
-	{ MODKEY, XK_b, setlayout, {.v = &layouts[3]} },  /* bstack */
+	{ MODKEY, XK_t, setlayout, { .v = &layouts[0]} },  /* tile */
+	{ MODKEY, XK_m, setlayout, { .v = &layouts[1]} },  /* monocle */
+	{ MODKEY, XK_d, setlayout, { .v = &layouts[2]} },  /* deck */
+	{ MODKEY, XK_b, setlayout, { .v = &layouts[3]} },  /* bstack */
 };
 
 static Button buttons[] = {
-
-	// { clickevent, mask  , button , function      , {argument} }
-	{ ClkClientWin , MODKEY, Button1, movemouse     , {0       } },
-	{ ClkClientWin , MODKEY, Button2, togglefloating, {0       } },
-	{ ClkClientWin , MODKEY, Button3, resizemouse   , {0       } },
-
+	// { clickevent, mask  , button , function      , { argument } }
+	{ ClkClientWin , MODKEY, Button1, movemouse     , { 0        } },
+	{ ClkClientWin , MODKEY, Button2, togglefloating, { 0        } },
+	{ ClkClientWin , MODKEY, Button3, resizemouse   , { 0        } },
 };
 
 // }}}
