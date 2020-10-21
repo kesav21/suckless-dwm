@@ -65,9 +65,7 @@ static const char *colors[][3] = {
 static const Rule rules[] = {
 
 	// { class              , instance              , title                 , tags mask, iscentered, isfloating, monitor }
-	{ "st-256color"         , "fzfmenu"             , NULL                  , 0        , 1         , 1         , -1      },
-	{ "st-256color"         , "scratchpad"          , NULL                  , 0        , 1         , 1         , -1      },
-	{ "st-256color"         , "calculator"          , NULL                  , 0        , 1         , 1         , -1      },
+	{ "st-256color"         , "centered"            , NULL                  , 0        , 1         , 1         , -1      },
 	{ "Pavucontrol"         , "pavucontrol"         , "Volume Control"      , 0        , 1         , 1         , -1      },
 	{ "SimpleScreenRecorder", "SimpleScreenRecorder", "simplescreenrecorder", 0        , 1         , 1         , -1      },
 	{ "Wicd-client.py"      , "wicd-client.py"      , "Wicd Network Manager", 0        , 1         , 1         , -1      },
