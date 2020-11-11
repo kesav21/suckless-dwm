@@ -62,6 +62,7 @@ static const char *colors[][3] = {
 
 // rules {{{
 
+#define SELTAG(x) 1 << (x - 1)
 static const Rule rules[] = {
 
 	// { class              , instance              , title                 , tags mask, iscentered, isfloating, monitor }
@@ -71,8 +72,12 @@ static const Rule rules[] = {
 	{ "Wicd-client.py"      , "wicd-client.py"      , "Wicd Network Manager", 0        , 1         , 1         , -1      },
 	{ "Thunar"              , NULL                  , NULL                  , 0        , 1         , 1         , -1      },
 	{ "firefox"             , "Toolkit"             , "Picture-in-Picture"  , 0        , 1         , 1         , -1      },
+	{ NULL                  , "discord"             , "discord"             , SELTAG(7), 0         , 0         , -1      },
+	{ NULL                  , "Signal"              , "signal"              , SELTAG(8), 0         , 0         , -1      },
+	{ NULL                  , "zoom"                , "zoom"                , SELTAG(9), 0         , 0         , -1      },
 
 };
+#undef SELTAG
 
 // }}}
 
