@@ -1,4 +1,6 @@
 // vim: set foldmethod=marker:
+// vim: set filetype=c:
+// vim: set nowrap:
 
 #include <X11/XF86keysym.h>
 
