@@ -74,9 +74,9 @@ static const Rule rules[] = {
 	{ "Wicd-client.py"      , "wicd-client.py"      , "Wicd Network Manager", 0        , 1         , 1         , -1      },
 	{ "Thunar"              , NULL                  , NULL                  , 0        , 1         , 1         , -1      },
 	{ "firefox"             , "Toolkit"             , "Picture-in-Picture"  , 0        , 1         , 1         , -1      },
-	{ NULL                  , "discord"             , "discord"             , SELTAG(7), 0         , 0         , -1      },
-	{ NULL                  , "Signal"              , "signal"              , SELTAG(8), 0         , 0         , -1      },
-	{ NULL                  , "zoom"                , "zoom"                , SELTAG(9), 0         , 0         , -1      },
+	{ "discord"             , "discord"             , "Discord"             , SELTAG(7), 0         , 0         , -1      },
+	{ "Signal"              , "signal"              , "Signal"              , SELTAG(8), 0         , 0         , -1      },
+	{ "zoom"                , "zoom"                , NULL                  , SELTAG(9), 0         , 0         , -1      },
 
 };
 #undef SELTAG
